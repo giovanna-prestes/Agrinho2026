@@ -15,268 +15,52 @@
             --texto-escuro: #111111;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background-color: var(--agro-trigo);
-            color: var(--texto-escuro);
-            line-height: 1.7;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { background-color: var(--agro-trigo); color: var(--texto-escuro); line-height: 1.7; }
         header {
             background: linear-gradient(rgba(30, 63, 32, 0.85), rgba(74, 55, 40, 0.9)), url('https://unsplash.com') no-repeat center center/cover;
-            color: var(--white);
-            text-align: center;
-            padding: 100px 20px;
-            border-bottom: 6px solid var(--agro-ouro);
+            color: var(--white); text-align: center; padding: 100px 20px; border-bottom: 6px solid var(--agro-ouro);
         }
-
-        header h1 {
-            font-size: 3.2rem;
-            margin-bottom: 20px;
-            font-weight: 800;
-            text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
-        }
-
-        header p {
-            font-size: 1.4rem;
-            max-width: 900px;
-            margin: 0 auto;
-            color: #f7f4eb;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 0 25px;
-        }
-
-        h2.titulo-secao {
-            color: var(--white);
-            background-color: var(--agro-verde-escuro);
-            margin-top: 50px;
-            margin-bottom: 25px;
-            padding: 15px 20px;
-            font-size: 1.8rem;
-            border-left: 8px solid var(--agro-ouro);
-            border-radius: 4px;
-        }
-
-        h3 {
-            color: var(--agro-verde-escuro);
-            margin-bottom: 15px;
-            font-size: 1.4rem;
-            border-bottom: 2px solid var(--agro-ouro);
-            padding-bottom: 5px;
-        }
-
-        .caixa-texto-longo {
-            background-color: var(--white);
-            padding: 35px;
-            border-radius: 12px;
-            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
-            margin-bottom: 30px;
-            border: 1px solid rgba(74, 55, 40, 0.15);
-        }
-
-        .caixa-texto-longo p {
-            font-size: 1.15rem;
-            color: var(--texto-escuro);
-            margin-bottom: 20px;
-            text-align: justify;
-        }
-
-        .caixa-texto-longo p:last-child {
-            margin-bottom: 0;
-        }
-
-        .painel-precos {
-            background: var(--white);
-            padding: 40px;
-            border-radius: 14px;
-            box-shadow: 0 8px 25px rgba(74, 55, 40, 0.1);
-            margin-bottom: 40px;
-            border: 1px solid rgba(188, 108, 37, 0.25);
-        }
-
-        .tabela-precos {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        .tabela-precos th {
-            background-color: var(--agro-verde-escuro);
-            color: var(--white);
-            padding: 18px;
-            text-align: left;
-            font-weight: 600;
-        }
-
-        .tabela-precos td {
-            padding: 18px;
-            text-align: left;
-            border-bottom: 1px solid #e5dfd3;
-            font-size: 1.05rem;
-            color: var(--texto-escuro);
-        }
-
-        .tabela-precos tr:nth-child(even) {
-            background-color: #fcfbfa;
-        }
-
-        .status {
-            font-weight: bold;
-            padding: 6px 10px;
-            border-radius: 4px;
-        }
-
-        .alta { color: #2b9348; background-color: rgba(43, 147, 72, 0.1); }
-        .baixa { color: #d90429; background-color: rgba(217, 4, 41, 0.1); }
-        .estavel { color: #bc6c25; background-color: rgba(188, 108, 37, 0.1); }
-
-        .grid-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 35px;
-            margin-top: 30px;
-            margin-bottom: 40px;
-        }
-
-        .card {
-            background: var(--white);
-            border-radius: 14px;
-            overflow: hidden;
-            box-shadow: 0 8px 22px rgba(74, 55, 40, 0.07);
-            transition: transform 0.3s, box-shadow 0.3s;
-            border: 1px solid rgba(74, 55, 40, 0.08);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 16px 30px rgba(74, 55, 40, 0.15);
-        }
-
-        .card img {
-            width: 100%;
-            height: 240px;
-            object-fit: cover;
-            border-bottom: 5px solid var(--agro-verde-folha);
-        }
-
-        .card-conteudo {
-            padding: 28px;
-            flex-grow: 1;
-        }
-
-        .card-conteudo h3 {
-            color: var(--agro-terra);
-            margin-top: 0;
-            margin-bottom: 14px;
-            font-size: 1.45rem;
-        }
-
-        .card-conteudo p {
-            font-size: 1rem;
-            color: #444;
-            margin-bottom: 20px;
-        }
-
-        .comprar-container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 28px 28px 28px;
-        }
-
-        .preco-tag {
-            display: inline-block;
-            background-color: var(--agro-ouro);
-            color: var(--white);
-            font-weight: bold;
-            padding: 10px 18px;
-            border-radius: 6px;
-            font-size: 1.15rem;
-        }
-
-        .btn-whats {
-            background-color: #25d366;
-            color: white;
-            text-decoration: none;
-            padding: 10px 16px;
-            border-radius: 6px;
-            font-weight: bold;
-            font-size: 0.95rem;
-        }
-
-        footer {
-            background-color: var(--agro-verde-escuro);
-            color: #f2e8cf;
-            text-align: center;
-            padding: 50px 20px;
-            margin-top: 60px;
-            border-top: 5px solid var(--agro-terra);
-        }
+        header h1 { font-size: 3.2rem; margin-bottom: 20px; font-weight: 800; text-shadow: 2px 2px 5px rgba(0,0,0,0.6); }
+        .container { max-width: 1200px; margin: 40px auto; padding: 0 25px; }
+        h2.titulo-secao { color: var(--white); background-color: var(--agro-verde-escuro); margin-top: 50px; padding: 15px 20px; border-left: 8px solid var(--agro-ouro); border-radius: 4px; }
+        .painel-precos { background: var(--white); padding: 40px; border-radius: 14px; box-shadow: 0 8px 25px rgba(74, 55, 40, 0.1); border: 1px solid rgba(188, 108, 37, 0.25); }
+        .tabela-precos { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        .tabela-precos th { background-color: var(--agro-verde-escuro); color: var(--white); padding: 18px; text-align: left; }
+        .tabela-precos td { padding: 18px; border-bottom: 1px solid #e5dfd3; }
+        .grid-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 35px; margin-top: 30px; }
+        .card { background: var(--white); border-radius: 14px; overflow: hidden; box-shadow: 0 8px 22px rgba(74, 55, 40, 0.07); transition: transform 0.3s; border: 1px solid rgba(74, 55, 40, 0.08); }
+        .card:hover { transform: translateY(-10px); }
+        .card img { height: 240px; object-fit: cover; width: 100%; border-bottom: 5px solid var(--agro-verde-folha); }
+        .card-conteudo { padding: 28px; } /* Corrigido: '.' adicionado */
+        .price-tag { display: inline-block; background-color: var(--agro-ouro); color: var(--white); padding: 10px 18px; border-radius: 4px; margin: 0 28px 28px; } /* Corrigido: '.' adicionado */
+        footer { background-color: var(--agro-verde-escuro); color: #f2e8cf; text-align: center; padding: 50px; margin-top: 60px; }
     </style>
 </head>
 <body>
-
     <header>
-        <h1>Tratado de Agronomia Sustentável e Biotecnologia</h1>
-        <p>A ciência aplicada à regeneração da terra, otimização de insumos e blindagem econômica do produtor.</p>
+        <h1>Tratado de Agronomia Sustentável</h1>
+        <p>Ciência aplicada à regeneração da terra e blindagem econômica.</p>
     </header>
-
     <div class="container">
-        
-        <!-- TEXTOS EXPLICATIVOS NO TOPO -->
-        <h2 class="titulo-secao">1. Fundamentos da Agronomia Sustentável</h2>
-        <div class="caixa-texto-longo">
-            <p>
-                O modelo agrícola atual enfrenta desafios severos: solos esgotados biologicamente, custos de importação instáveis e oscilações climáticas imprevisíveis. A resposta técnica para proteger as propriedades rurais não está no aumento contínuo de fertilizantes químicos solúveis, mas sim na implementação da <strong>Agronomia Sustentável Regenerativa</strong>.
-            </p>
-            <p>
-                Este sistema enxerga a lavoura como um ecossistema integrado e vivo. Ao estimular a microbiota benéfica nativa, descompactar fisicamente as camadas do subsolo e adotar o manejo integrado, o agricultor constrói uma lavoura resiliente a veranicos prolongados, ataques severos de pragas e fungos de raiz perigosos.
-            </p>
+        <h2 class="titulo-secao">Indicadores de Mercado</h2>
+        <div class="grid-cards">
+            <div class="card">
+                <img src="https://unsplash.com" alt="Gráfico de Mercado">
+                <div class="card-conteudo">
+                    <h3>Análise de Preços</h3>
+                    <p>Valores médios negociados em tempo real.</p>
+                </div>
+                <span class="price-tag">Preço Médio Atual</span>
+            </div>
         </div>
-
-        <h2 class="titulo-secao">2. Pilares do Manejo Avançado no Campo</h2>
-        <div class="caixa-texto-longo">
-            <h3>🔬 Revolução do Manejo Integrado de Pragas (MIP-Bio)</h3>
-            <p>
-                A aplicação massiva de moléculas químicas tradicionais acelerou a resistência genética de insetos complexos, como a cigarrinha-do-milho e a mosca-branca. O manejo biológico quebra essa barreira utilizando fungos vivos (como o <em>Metarhizium</em> e a <em>Beauveria</em>). Esses inimigos naturais infectam os alvos diretamente e continuam se multiplicando de forma autônoma na lavoura, fornecendo proteção estendida mesmo em períodos chuvosos.
-            </p>
-
-            <h3>🟤 Solubilização de Nutrientes e Perfil de Solo</h3>
-            <p>
-                Estudos mostram que grande parte do fósforo e potássio adicionados via adubação convencional fixa-se no solo de maneira indisponível para as plantas. A introdução de microrganismos solubilizadores de minerais quebra essas ligações químicas complexas, liberando nutrientes retidos diretamente para o sistema radicular, o que diminui drasticamente o desperdício de insumos por hectare.
-            </p>
-
-            <h3>💧 Eficiência de Recursos Hídricos</h3>
-            <p>
-                Através da irrigação por gotejamento subsuperficial monitorada por sensores de umidade digitais, a água e a fertirrigação são liberadas diretamente na rizosfera da cultura. Esse procedimento elimina perdas por evaporação superficial e bloqueia o crescimento de plantas invasoras nas entrelinhas, economizando recursos e mão de obra de capina.
-            </p>
-        </div>
-
-        <!-- GRÁFICO E TABELA NO MEIO -->
-        <h2 class="titulo-secao">3. Painel Financeiro e Indicadores de Preços</h2>
         <section class="painel-precos">
-            <p style="font-size: 1.05rem; color: #444; margin-bottom: 15px;">Valores médios negociados nas principais bolsas e cooperativas agropecuárias brasileiras.</p>
-            
             <table class="tabela-precos">
-                <thead>
-                    <tr>
-                        <th>Commodity Agrícola</th>
-                        <th>Região de Referência</th>
-                        <th>Preço Médio Atual</th>
-                        <th>Tendência Semanal</th>
-                    </tr>
-                </thead>
-                <tbody>
+                <thead><tr><th>Commodity</th><th>Preço</th></tr></thead>
+                <tbody><tr><td>Soja (Saca 60kg)</td><td>R$ 142,80</td></tr></tbody>
+            </table>
+        </section>
+    </div>
+    <footer><p>&copy; 2026 Plataforma Agronomia Sustentável.</p></footer>
+</body>
+</html>
