@@ -67,13 +67,23 @@
             border-radius: 4px;
         }
 
+        /* Estilização para as caixas de texto do conteúdo */
+        .secao-conteudo {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 14px;
+            box-shadow: 0 6px 18px rgba(74, 55, 40, 0.05);
+            margin-bottom: 30px;
+            border: 1px solid rgba(74, 55, 40, 0.05);
+        }
+
         h3 {
             color: var(--agro-verde-escuro);
             margin-bottom: 15px;
             font-size: 1.4rem;
             border-bottom: 2px solid var(--agro-ouro);
             padding-bottom: 5px;
-            margin-top: 25px;
+            margin-top: 15px;
         }
 
         p.texto-agro {
@@ -124,34 +134,19 @@
             padding: 6px 10px;
             border-radius: 4px;
         }
-
         .alta { color: #2b9348; background-color: rgba(43, 147, 72, 0.1); }
-        .baixa { color: #d90429; background-color: rgba(217, 4, 41, 0.1); }
-        .estavel { color: #bc6c25; background-color: rgba(188, 108, 37, 0.1); }
 
-        .grid-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 35px;
-            margin-top: 30px;
-            margin-bottom: 40px;
-        }
-
-        .card {
+        /* A CAIXINHA DO GRÁFICO (RESTAURADA E CORRIGIDA) */
+        .card-grafico-container {
             background: var(--white);
             border-radius: 14px;
             overflow: hidden;
-            box-shadow: 0 8px 22px rgba(74, 55, 40, 0.07);
-            transition: transform 0.3s, box-shadow 0.3s;
-            border: 1px solid rgba(74, 55, 40, 0.08);
+            box-shadow: 0 8px 25px rgba(74, 55, 40, 0.08);
+            border: 1px solid rgba(74, 55, 40, 0.1);
+            margin-top: 30px;
+            margin-bottom: 30px;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 16px 30px rgba(74, 55, 40, 0.15);
         }
 
         .grafico-box {
@@ -166,7 +161,6 @@
 
         .card-conteudo {
             padding: 28px;
-            flex-grow: 1;
         }
 
         .card-conteudo h3 {
@@ -179,16 +173,14 @@
         }
 
         .card-conteudo p {
-            font-size: 1rem;
+            font-size: 1.1rem;
             color: #444444;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
         }
 
         .comprar-container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
             padding: 0 28px 28px 28px;
+            display: flex;
         }
 
         .price-tag {
@@ -196,18 +188,20 @@
             background-color: var(--agro-ouro);
             color: var(--white);
             font-weight: bold;
-            padding: 12px 20px;
+            padding: 14px 24px;
             border-radius: 6px;
             text-decoration: none;
             text-align: center;
             width: 100%;
+            font-size: 1.1rem;
             transition: background 0.2s, transform 0.1s;
             cursor: pointer;
+            box-shadow: 0 4px 10px rgba(188, 108, 37, 0.2);
         }
 
         .price-tag:hover {
             background-color: #9e5314;
-            transform: scale(1.02);
+            transform: scale(1.01);
         }
 
         footer {
@@ -229,77 +223,69 @@
 
     <div class="container">
     
+        <!-- SEÇÃO 1 -->
         <h2 class="titulo-secao">1. Fundamentos da Agronomia Sustentável</h2>
-        <p class="texto-agro">
-            O modelo agrícola atual enfrenta desafios severos: solos esgotados, custos instáveis e clima imprevisível. A resposta técnica é a <strong>Agronomia Sustentável Regenerativa</strong>, que enxerga a lavoura como um ecossistema integrado e vivo para construir resiliência.
-        </p>
+        <div class="secao-conteudo">
+            <p class="texto-agro">
+                O modelo agrícola atual enfrenta desafios severos: solos esgotados, custos instáveis e clima imprevisível. A resposta técnica é a <strong>Agronomia Sustentável Regenerativa</strong>, que enxerga a lavoura como um ecossistema integrado e vivo para construir resiliência contra as adversidades do campo.
+            </p>
+        </div>
 
+        <!-- SEÇÃO 2 -->
         <h2 class="titulo-secao">2. Pilares do Manejo Avançado no Campo</h2>
-        
-        <h3>🔬 Revolução do Manejo Integrado de Pragas (MIP-Bio)</h3>
-        <p class="texto-agro">
-            O manejo biológico (fungos como <em>Metarhizium</em> e <em>Beauveria</em>) supera a resistência de insetos complexos, oferecendo proteção autônoma e duradoura.
-        </p>
+        <div class="secao-conteudo">
+            <h3>🔬 Revolução do Manejo Integrado de Pragas (MIP-Bio)</h3>
+            <p class="texto-agro">
+                O manejo biológico utilizando fungos vivos como <em>Metarhizium</em> e <em>Beauveria</em> quebra a barreira da resistência genética de pragas complexas, oferecendo uma proteção autônoma, estendida e ecologicamente limpa para a lavoura.
+            </p>
 
-        <h3>🟤 Solubilização de Nutrientes e Perfil de Solo</h3>
-        <p class="texto-agro">
-            Microrganismos solubilizadores liberam fósforo e potássio fixados no solo, reduzindo o desperdício de insumos por hectare.
-        </p>
+            <h3>🟤 Solubilização de Nutrientes e Perfil de Solo</h3>
+            <p class="texto-agro">
+                A introdução de microrganismos solubilizadores quebra as ligações químicas que mantêm o fósforo e o potássio fixados de forma indisponível no solo, liberando os minerais direto para as raízes e cortando desperdícios.
+            </p>
 
-        <h3>💧 Eficiência de Recursos Hídricos</h3>
-        <p class="texto-agro">
-            Gotejamento subsuperficial monitorado leva água direto à rizosfera, eliminando perdas e aumentando a eficiência técnica.
-        </p>
+            <h3>💧 Eficiência de Recursos Hídricos</h3>
+            <p class="texto-agro">
+                Através do gotejamento subsuperficial gerenciado, a água e os nutrientes chegam diretamente à rizosfera da cultura. Isso elimina completamente perdas por evaporação na superfície e barra o avanço de plantas daninhas.
+            </p>
+        </div>
 
+        <!-- SEÇÃO 3 (AQUI FICA A CAIXINHA DO GRÁFICO ATUALIZADA) -->
         <h2 class="titulo-secao">3. Painel Financeiro e Indicadores de Preços</h2>
         
-        <div class="grid-cards">
-            <div class="card">
-                <div class="grafico-box">
-                    <svg width="85%" height="160" viewBox="0 0 300 100" style="overflow: visible;">
-                        <path d="M 0 80 Q 40 30 90 60 T 180 20 T 300 40" fill="none" stroke="#386641" stroke-width="4"/>
-                        <circle cx="90" cy="60" r="6" fill="#bc6c25" />
-                        <circle cx="180" cy="20" r="6" fill="#bc6c25" />
-                        <circle cx="300" cy="40" r="6" fill="#bc6c25" />
-                        <text x="80" y="80" font-size="10" fill="#4a3728" font-weight="bold">Tendência</text>
-                    </svg>
-                </div>
-                
-                <div class="card-conteudo">
-                    <h3>Análise Mercadológica</h3>
-                    <p>Valores médios atualizados nas principais bolsas e cooperativas brasileiras.</p>
-                </div>
-                
-                <div class="comprar-container">
-                    <a href="#" class="price-tag">Ver Painel Completo</a>
-                </div>
+        <div class="card-grafico-container">
+            <!-- Gráfico estruturado por desenho vetorial direto na tela -->
+            <div class="grafico-box">
+                <svg width="90%" height="160" viewBox="0 0 300 100" style="overflow: visible;">
+                    <path d="M 0 80 Q 40 30 90 60 T 180 20 T 300 40" fill="none" stroke="#386641" stroke-width="4"/>
+                    <circle cx="90" cy="60" r="6" fill="#bc6c25" />
+                    <circle cx="180" cy="20" r="6" fill="#bc6c25" />
+                    <circle cx="300" cy="40" r="6" fill="#bc6c25" />
+                    <text x="185" y="15" font-size="10" fill="#1e3f20" font-weight="bold">Tendência de Mercado</text>
+                </svg>
+            </div>
+            
+            <div class="card-conteudo">
+                <h3>Análise de Preços Mercadológicos</h3>
+                <p>Valores médios negociados em tempo real nas principais bolsas e cooperativas brasileiras.</p>
+            </div>
+            
+            <div class="comprar-container">
+                <a href="#" class="price-tag">Ver Painel de Preços Completo</a>
             </div>
         </div>
 
+        <!-- TABELA DE COMMODITIES -->
         <section class="painel-precos">
             <table class="tabela-precos">
                 <thead>
                     <tr>
                         <th>Commodity Agrícola</th>
-                        <th>Região / Saca 60kg</th>
-                        <th>Preço Médio</th>
-                        <th>Tendência</th>
+                        <th>Região de Referência</th>
+                        <th>Preço Médio Atual</th>
+                        <th>Tendência Semanal</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><strong>Soja</strong></td>
-                        <td>Paranaguá-PR</td>
-                        <td>R$ 142,80</td>
-                        <td><span class="status alta">⬆️ Alta</span></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Milho</strong></td>
-                        <td>SP (Interior)</td>
-                        <td>R$ 68,50</td>
-                        <td><span class="status estavel">➡️ Estável</span></td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-    </div>
+                        <td><strong>Soja em Grão</strong></td>
