@@ -5,213 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plataforma Agronomia Sustentável</title>
     <style>
-        :root {
-            --agro-verde-escuro: #1e3f20; 
-            --agro-verde-folha: #386641;  
-            --agro-terra: #4a3728;         
-            --agro-trigo: #f4efe2;        
-            --agro-ouro: #bc6c25;          
-            --white: #ffffff;
-            --texto-escuro: #111111;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background-color: var(--agro-trigo);
-            color: var(--texto-escuro);
-            line-height: 1.7;
-        }
-
-        header {
-            background: linear-gradient(rgba(30, 63, 32, 0.85), rgba(74, 55, 40, 0.9)), url('https://unsplash.com') no-repeat center center/cover;
-            color: var(--white);
-            text-align: center;
-            padding: 100px 20px;
-            border-bottom: 6px solid var(--agro-ouro);
-        }
-
-        header h1 {
-            font-size: 3.2rem;
-            margin-bottom: 20px;
-            font-weight: 800;
-            text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
-        }
-
-        header p {
-            font-size: 1.4rem;
-            max-width: 900px;
-            margin: 0 auto;
-            color: #f7f4eb;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 0 25px;
-        }
-
-        h2.titulo-secao {
-            color: var(--white);
-            background-color: var(--agro-verde-escuro);
-            margin-top: 50px;
-            margin-bottom: 25px;
-            padding: 15px 20px;
-            font-size: 1.8rem;
-            border-left: 8px solid var(--agro-ouro);
-            border-radius: 4px;
-        }
-
-        /* Estilização para as caixas de texto do conteúdo */
-        .secao-conteudo {
-            background: var(--white);
-            padding: 30px;
-            border-radius: 14px;
-            box-shadow: 0 6px 18px rgba(74, 55, 40, 0.05);
-            margin-bottom: 30px;
-            border: 1px solid rgba(74, 55, 40, 0.05);
-        }
-
-        h3 {
-            color: var(--agro-verde-escuro);
-            margin-bottom: 15px;
-            font-size: 1.4rem;
-            border-bottom: 2px solid var(--agro-ouro);
-            padding-bottom: 5px;
-            margin-top: 15px;
-        }
-
-        p.texto-agro {
-            font-size: 1.2rem;
-            color: var(--texto-escuro);
-            margin-bottom: 20px;
-            text-align: justify;
-        }
-
-        .painel-precos {
-            background: var(--white);
-            padding: 40px;
-            border-radius: 14px;
-            box-shadow: 0 8px 25px rgba(74, 55, 40, 0.1);
-            margin-bottom: 40px;
-            border: 1px solid rgba(188, 108, 37, 0.25);
-            margin-top: 30px;
-        }
-
-        .tabela-precos {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        .tabela-precos th {
-            background-color: var(--agro-verde-escuro);
-            color: var(--white);
-            padding: 18px;
-            text-align: left;
-            font-weight: 600;
-        }
-
-        .tabela-precos td {
-            padding: 18px;
-            text-align: left;
-            border-bottom: 1px solid #e5dfd3;
-            font-size: 1.05rem;
-            color: var(--texto-escuro);
-        }
-
-        .tabela-precos tr:nth-child(even) {
-            background-color: #fcfbfa;
-        }
-
-        .status {
-            font-weight: bold;
-            padding: 6px 10px;
-            border-radius: 4px;
-        }
-        .alta { color: #2b9348; background-color: rgba(43, 147, 72, 0.1); }
-
-        /* A CAIXINHA DO GRÁFICO (RESTAURADA E CORRIGIDA) */
-        .card-grafico-container {
-            background: var(--white);
-            border-radius: 14px;
-            overflow: hidden;
-            box-shadow: 0 8px 25px rgba(74, 55, 40, 0.08);
-            border: 1px solid rgba(74, 55, 40, 0.1);
-            margin-top: 30px;
-            margin-bottom: 30px;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .grafico-box {
-            width: 100%;
-            height: 240px;
-            background: #faf8f5;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-bottom: 5px solid var(--agro-verde-folha);
-        }
-
-        .card-conteudo {
-            padding: 28px;
-        }
-
-        .card-conteudo h3 {
-            color: var(--agro-terra);
-            margin-top: 0;
-            margin-bottom: 14px;
-            font-size: 1.45rem;
-            border-bottom: none;
-            padding-bottom: 0;
-        }
-
-        .card-conteudo p {
-            font-size: 1.1rem;
-            color: #444444;
-            margin-bottom: 10px;
-        }
-
-        .comprar-container {
-            padding: 0 28px 28px 28px;
-            display: flex;
-        }
-
-        .price-tag {
-            display: inline-block;
-            background-color: var(--agro-ouro);
-            color: var(--white);
-            font-weight: bold;
-            padding: 14px 24px;
-            border-radius: 6px;
-            text-decoration: none;
-            text-align: center;
-            width: 100%;
-            font-size: 1.1rem;
-            transition: background 0.2s, transform 0.1s;
-            cursor: pointer;
-            box-shadow: 0 4px 10px rgba(188, 108, 37, 0.2);
-        }
-
-        .price-tag:hover {
-            background-color: #9e5314;
-            transform: scale(1.01);
-        }
-
-        footer {
-            background-color: var(--agro-verde-escuro);
-            color: #f2e8cf;
-            text-align: center;
-            padding: 50px 20px;
-            margin-top: 60px;
-            border-top: 5px solid var(--agro-terra);
-        }
+        
     </style>
 </head>
 <body>
@@ -222,14 +16,7 @@
     </header>
 
     <div class="container">
-    
-        <!-- SEÇÃO 1 -->
-        <h2 class="titulo-secao">1. Fundamentos da Agronomia Sustentável</h2>
-        <div class="secao-conteudo">
-            <p class="texto-agro">
-                O modelo agrícola atual enfrenta desafios severos: solos esgotados, custos instáveis e clima imprevisível. A resposta técnica é a <strong>Agronomia Sustentável Regenerativa</strong>, que enxerga a lavoura como um ecossistema integrado e vivo para construir resiliência contra as adversidades do campo.
-            </p>
-        </div>
+
 
         <!-- SEÇÃO 2 -->
         <h2 class="titulo-secao">2. Pilares do Manejo Avançado no Campo</h2>
@@ -265,15 +52,6 @@
                 </svg>
             </div>
             
-            <div class="card-conteudo">
-                <h3>Análise de Preços Mercadológicos</h3>
-                <p>Valores médios negociados em tempo real nas principais bolsas e cooperativas brasileiras.</p>
-            </div>
-            
-            <div class="comprar-container">
-                <a href="#" class="price-tag">Ver Painel de Preços Completo</a>
-            </div>
-        </div>
 
         <!-- TABELA DE COMMODITIES -->
         <section class="painel-precos">
@@ -286,6 +64,8 @@
                         <th>Tendência Semanal</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
+                 <tr>
                         <td><strong>Soja em Grão</strong></td>
+                        </tr>
+            </body>
+                   
