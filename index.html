@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plataforma Agronomia Sustentável</title>
-   <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="estilo.css">
 </head>
+
 <body>
 
     <header>
@@ -21,52 +23,59 @@
         <div class="secao-conteudo">
             <h3>🔬 Revolução do Manejo Integrado de Pragas (MIP-Bio)</h3>
             <p class="texto-agro">
-                O manejo biológico utilizando fungos vivos como <em>Metarhizium</em> e <em>Beauveria</em> quebra a barreira da resistência genética de pragas complexas, oferecendo uma proteção autônoma, estendida e ecologicamente limpa para a lavoura.
+                O manejo biológico utilizando fungos vivos como <em>Metarhizium</em> e <em>Beauveria</em> quebra a
+                barreira da resistência genética de pragas complexas, oferecendo uma proteção autônoma, estendida e
+                ecologicamente limpa para a lavoura.
             </p>
 
             <h3>🟤 Solubilização de Nutrientes e Perfil de Solo</h3>
             <p class="texto-agro">
-                A introdução de microrganismos solubilizadores quebra as ligações químicas que mantêm o fósforo e o potássio fixados de forma indisponível no solo, liberando os minerais direto para as raízes e cortando desperdícios.
+                A introdução de microrganismos solubilizadores quebra as ligações químicas que mantêm o fósforo e o
+                potássio fixados de forma indisponível no solo, liberando os minerais direto para as raízes e cortando
+                desperdícios.
             </p>
 
             <h3>💧 Eficiência de Recursos Hídricos</h3>
             <p class="texto-agro">
-                Através do gotejamento subsuperficial gerenciado, a água e os nutrientes chegam diretamente à rizosfera da cultura. Isso elimina completamente perdas por evaporação na superfície e barra o avanço de plantas daninhas.
+                Através do gotejamento subsuperficial gerenciado, a água e os nutrientes chegam diretamente à rizosfera
+                da cultura. Isso elimina completamente perdas por evaporação na superfície e barra o avanço de plantas
+                daninhas.
             </p>
         </div>
         <div class="botao de ola">
-            <button>identificação</button>
+            <input type="text" id="nomeUsuario" placeholder="Digite seu nome">
+            <button onclick="darBoasVindas()">identificação</button>
         </div>
+        <p id="resultado"></p>
 
-      
+
         <div class="card-grafico-container">
             <!-- Gráfico estruturado por desenho vetorial direto na tela -->
             <div class="grafico-box">
                 <svg width="90%" height="160" viewBox="0 0 300 100" style="overflow: visible;">
-                    <path d="M 0 80 Q 40 30 90 60 T 180 20 T 300 40" fill="none" stroke="#386641" stroke-width="4"/>
+                    <path d="M 0 80 Q 40 30 90 60 T 180 20 T 300 40" fill="none" stroke="#386641" stroke-width="4" />
                     <circle cx="90" cy="60" r="6" fill="#bc6c25" />
                     <circle cx="180" cy="20" r="6" fill="#bc6c25" />
                     <circle cx="300" cy="40" r="6" fill="#bc6c25" />
                     <text x="185" y="15" font-size="10" fill="#1e3f20" font-weight="bold">Tendência de Mercado</text>
                 </svg>
             </div>
-            
 
-        <!-- TABELA DE COMMODITIES -->
-        <section class="painel-precos">
-            <table class="tabela-precos">
-                <thead>
-                    <tr>
-                        <th>Commodity Agrícola</th>
-                        <th>Região de Referência</th>
-                        <th>Preço Médio Atual</th>
-                        <th>Tendência Semanal</th>
-                    </tr>
-                </thead>
-                 <tr>
-                        <td><strong>Soja em Grão</strong></td>
+
+            <!-- TABELA DE COMMODITIES -->
+            <section class="painel-precos">
+                <table class="tabela-precos">
+                    <thead>
+                        <tr>
+                            <th>Commodity Agrícola</th>
+                            <th>Região de Referência</th>
+                            <th>Preço Médio Atual</th>
+                            <th>Tendência Semanal</th>
                         </tr>
-           
-                   
-                    </body>
-                   
+                    </thead>
+                    <tr>
+                        <td><strong>Soja em Grão</strong></td>
+                    </tr>
+
+
+</body>
