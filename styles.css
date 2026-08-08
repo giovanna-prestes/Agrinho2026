@@ -1,4 +1,3 @@
-/* Estilos Gerais (Modo Claro padrão) */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -48,7 +47,6 @@ section {
     margin-top: 10px;
 }
 
-/* Estilos para o Modo Escuro (Ativado via JavaScript) */
 body.modo-escuro {
     background-color: #121212;
     color: #e0e0e0;

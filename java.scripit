@@ -1,6 +1,4 @@
-// Seleciona o botão de alternar tema
 const botao = document.getElementById('botao-tema');
-
 // Escuta o clique no botão
 botao.addEventListener('click', () => {
     // Liga ou desliga a classe 'modo-escuro' no corpo do site
